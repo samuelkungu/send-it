@@ -1,5 +1,5 @@
-### send-it
-Web app that renders courier services that is  parcel delivery.
+<!-- ### send-it -->
+<!-- Web app that renders courier services that is  parcel delivery. -->
 
 ### Endpoints
 GET /parcels Fetch all parcel delivery orders <br/>
