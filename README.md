@@ -1,5 +1,6 @@
 
-### SendIT is a courier service that helps users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories. <br/>
+### SendIT is a courier service that helps users deliver parcels to different destinations. <br/>
+SendIT provides courier quotes based on weight categories. <br/>
 
 ### Features of the application <br/>
 1. Allow users to create an account and log in.  <br/>
