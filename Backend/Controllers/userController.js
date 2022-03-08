@@ -2,7 +2,7 @@ const mssql = require('mssql')
 const config = require('../Configuration/dbconfig')
 
 
-//------------ CREATING A USER -----------------
+//------------ CREATING A NEW USER -----------------
 async function createUser (req,res){
     const{user_id, user_name ,full_name , phone_number, email, password , isAdmin , isDeleted , isSent} = req.body
     try{
@@ -26,7 +26,7 @@ async function createUser (req,res){
 }
 
 
-//------------ DELETING A USER -----------------
+//------------ DELETING ( A SPECIFIC ) USER'S DETAILS -----------------
 async function deleteUser (req,res){
     const user_id = req.params.id
     try{
@@ -42,7 +42,7 @@ async function deleteUser (req,res){
 }
 
 
-//------------ GETTING A SPECIFIC USER -----------------
+//------------ GETTING ( A SPECIFIC ) USER'S DETAILS-----------------
 async function getAUser (req,res){
     const user_id = req.params.id
     try{
@@ -59,7 +59,7 @@ async function getAUser (req,res){
 }
 
 
-//------------ GETTING ALL USERS -----------------
+//------------ GETTING ALL USERS' DETAILS-----------------
 async function getUsers (req,res){
     try{
         let pool = await mssql.connect(config)
@@ -72,7 +72,7 @@ async function getUsers (req,res){
 }
 
 
-//------------ UPDATING A SPECIFIC USER -----------------
+//------------ UPDATING ( A SPECIFIC ) USER'S DETAILS-----------------
 async function updateUser (req,res){
     const{ user_name ,full_name , phone_number, email, password , isAdmin , isDeleted , isSent} = req.body
     const user_id = req.params.id
