@@ -18,7 +18,7 @@ async function createUser (req,res){
         .input('isDeleted', mssql.Bit, isDeleted)
         .input('isSent', mssql.Bit, isSent)
         .execute(`createUser `)
-        res.json("User added successfully")
+        res.json("User Added Successfully")
 
     } catch (err){
         console.log(err);
@@ -34,7 +34,7 @@ async function deleteUser (req,res){
          await pool.request()
         .input('user_id',mssql.Int,user_id)
         .execute('deleteUser')
-        res.json("User deleted successfully")
+        res.json("User Deleted Successfully")
 
     } catch (err){
         console.log(err);
@@ -51,7 +51,6 @@ async function getAUser (req,res){
         .input('user_id',mssql.Int,user_id)
         .execute('getAUser')
         res.json(result.recordset)
-        // res.json("User found successfully")
 
     } catch (err){
         console.log(err);
@@ -89,7 +88,7 @@ async function updateUser (req,res){
         .input('isDeleted', mssql.Bit, isDeleted)
         .input('isSent', mssql.Bit, isSent)
         .execute('updateUser')
-        res.json("User updated successfully")
+        res.json("User Updated Successfully")
 
     } catch (err){
         console.log(err);
