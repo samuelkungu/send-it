@@ -19,9 +19,9 @@ let config = {
 }
 mssql.connect(config).then(pool =>{
     if(pool.connecting){
-        console.log('connecting to the database');
+        console.log('Connecting to the database');
     }
     if(pool.connected){
-        console.log("connected");
+        console.log("Connected");
     }
 }).catch(e=> console.log(e))
