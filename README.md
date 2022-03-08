@@ -1,5 +1,5 @@
-<!-- ### send-it -->
-<!-- Web app that renders courier services that is  parcel delivery. -->
+
+### SendIT is a courier service that helps users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.
 
 ### Endpoints
 GET /parcels Fetch all parcel delivery orders <br/>
