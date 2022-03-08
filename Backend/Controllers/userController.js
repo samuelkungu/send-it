@@ -1,5 +1,5 @@
 const mssql = require('mssql')
-const config = require('../config/db')
+const config = require('../Configuration/dbconfig')
 
 async function getUsers (req,res){
     try{
@@ -11,7 +11,7 @@ async function getUsers (req,res){
         console.log(err);
     }
 }
-async function getUser (req,res){
+async function getAUser (req,res){
     const id = req.params.id
     try{
         let pool = await mssql.connect(config)
@@ -25,7 +25,7 @@ async function getUser (req,res){
         console.log(err);
     }
 }
-async function addUser (req,res){
+async function createUser (req,res){
     const{id, firstname, lastname, email, project, passwd} = req.body
     try{
         let pool = await mssql.connect(config)
@@ -69,7 +69,7 @@ async function deleteUser (req,res){
         let pool = await mssql.connect(config)
         let result1 = await pool.request()
         .input('id',mssql.Int,id)
-        .execute('spDel')
+        .execute('deleteUser')
         res.json("User deleted successfully")
 
     } catch (err){
@@ -79,8 +79,8 @@ async function deleteUser (req,res){
 
 module.exports = {
     getUsers,
-    getUser,
-    addUser,
+    getAUser,
+    createUser,
     updateUser,
     deleteUser
 }
