@@ -1,7 +1,8 @@
 const mssql = require('mssql')
-const config = require('../Configuration/dbconfig')
+const config = require('../Configuration/dbconfig'/)
 
 
+//------------ CREATING A USER -----------------
 async function createUser (req,res){
     const{user_id, user_name ,full_name , phone_number, email, password , isAdmin , isDeleted , isSent} = req.body
     try{
@@ -24,6 +25,8 @@ async function createUser (req,res){
     }
 }
 
+
+//------------ DELETING A USER -----------------
 async function deleteUser (req,res){
     const user_id = req.params.user_id
     try{
@@ -39,6 +42,7 @@ async function deleteUser (req,res){
 }
 
 
+//------------ GETTING A SPECIFIC USER -----------------
 async function getAUser (req,res){
     const user_id = req.params.user_id
     try{
@@ -54,6 +58,8 @@ async function getAUser (req,res){
     }
 }
 
+
+//------------ GETTING ALL USERS -----------------
 async function getUsers (req,res){
     try{
         await mssql.connect(config)
@@ -65,6 +71,8 @@ async function getUsers (req,res){
     }
 }
 
+
+//------------ UPDATING A SPECIFIC USER -----------------
 async function updateUser (req,res){
     const{ user_name ,full_name , phone_number, email, password , isAdmin , isDeleted , isSent} = req.body
     const user_id = req.params.user_id
@@ -87,7 +95,7 @@ async function updateUser (req,res){
         console.log(err);
     }
 }
-
+//------------ EXPORTING THE FUNCTIONS-----------------
 module.exports = {
     getUsers,
     getAUser,
