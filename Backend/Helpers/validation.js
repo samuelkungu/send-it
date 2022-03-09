@@ -1,8 +1,10 @@
-const Joi = require("joi")
+const Joi = require("joi");
 
-const schema = Joi.object().keys{
+const validation = Joi.object().keys({
 
+        email:Joi.string().required().email(),
+        password:Joi.string().min(8).required()
 
-}
+})
 
-module.exports=schema
+module.exports=validation
