@@ -65,7 +65,10 @@ const bcrypt = require('bcrypt');
 
                     const validPassword = await bcrypt.compare(hashedPassword, password)
                     if(!validPassword) return res.send('Invalid Credentials')
-                    
+
+                    const token = jwt.sign(user, process.env.SECRET_KEY, { expiresIn : "1m"})
+                    res.send({ user, token })
+
 
                 } catch (err){
                     console.log(err);
