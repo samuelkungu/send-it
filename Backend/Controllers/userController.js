@@ -1,10 +1,20 @@
 const mssql = require('mssql')
 const config = require('../Configuration/dbconfig')
 const { v4: uuidv4 } = require('uuid');
+const { validation } = require ("../Helpers/validation.js")
 
 //------------ CREATING A NEW USER -----------------
 async function createUser (req,res){
-    const{ user_name ,full_name , phone_number, email, password } = req.body
+    const{ user_name ,full_name , phone_number, email, password } = req.body;
+
+//------------ VALIDATING THE USER ENTRIES ----------
+    const { error } = validation(req.body)
+    if (error) {
+        return res
+                    .status(400)
+                    .send({ success: false, message: error.details[0].message })
+    }
+
     try{
         let pool = await mssql.connect(config)
         await pool.request()
