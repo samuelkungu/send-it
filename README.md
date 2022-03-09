@@ -17,4 +17,6 @@ specific user <br/>
 4. PUT /parcels/<parcelId>/cancel - Cancel the specific parcel delivery order <br/>
 5. POST /parcels - Create a parcel delivery order<br/>
 6. POST/user - Register user <br/>
-7. POST/id - Login user<br/>
+7. POST/id - Login user <br/>
+8. DELETE/id - Delete a specific user or parcel  <br/>
+ 
