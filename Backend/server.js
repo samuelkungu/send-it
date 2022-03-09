@@ -4,10 +4,10 @@ const app = express ()
 app.use(express.json())
 
 // -------------- CONNECTING TO USERS ROUTES ------------------
-app.use('/Parcel-Delivery', require('./Routes/userRoutes'))
+app.use('/users', require('./Routes/userRoutes'))
 
 // -------------- CONNECTING TO PARCELS ROUTES ------------------
-app.use('/Parcel-Delivery', require('./Routes/parcelRoutes'))
+app.use('/parcels', require('./Routes/parcelRoutes'))
 
 
 app.listen(3005, ()=> {

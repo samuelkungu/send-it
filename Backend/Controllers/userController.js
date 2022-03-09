@@ -1,22 +1,19 @@
 const mssql = require('mssql')
 const config = require('../Configuration/dbconfig')
-
+const { v4: uuidv4 } = require('uuid');
 
 //------------ CREATING A NEW USER -----------------
 async function createUser (req,res){
-    const{user_id, user_name ,full_name , phone_number, email, password , isAdmin , isDeleted , isSent} = req.body
+    const{ user_name ,full_name , phone_number, email, password } = req.body
     try{
         let pool = await mssql.connect(config)
         await pool.request()
-        .input('user_id', mssql.Int, user_id)
+        .input('id',uuidv4())
         .input('user_name', mssql.VarChar, user_name)
         .input('full_name', mssql.VarChar, full_name)
         .input('phone_number', mssql.VarChar, phone_number)
         .input('email', mssql.VarChar, email)
         .input('password', mssql.VarChar, password)
-        .input('isAdmin', mssql.Bit, isAdmin)
-        .input('isDeleted', mssql.Bit, isDeleted)
-        .input('isSent', mssql.Bit, isSent)
         .execute(`createUser `)
         res.json("User Added Successfully")
 
@@ -28,11 +25,11 @@ async function createUser (req,res){
 
 //------------ DELETING ( A SPECIFIC ) USER'S DETAILS -----------------
 async function deleteUser (req,res){
-    const user_id = req.params.id
+    const id = req.params.id
     try{
         let pool = await mssql.connect(config)
          await pool.request()
-        .input('user_id',mssql.Int,user_id)
+        .input('id',mssql.VarChar, id)
         .execute('deleteUser')
         res.json("User Deleted Successfully")
 
@@ -44,11 +41,11 @@ async function deleteUser (req,res){
 
 //------------ GETTING ( A SPECIFIC ) USER'S DETAILS-----------------
 async function getAUser (req,res){
-    const user_id = req.params.id
+    const id = req.params.id
     try{
         let pool = await mssql.connect(config)
         let result = await pool.request()
-        .input('user_id',mssql.Int,user_id)
+        .input('id',mssql.VarChar,id)
         .execute('getAUser')
         res.json(result.recordset)
 
@@ -73,20 +70,17 @@ async function getUsers (req,res){
 
 //------------ UPDATING ( A SPECIFIC ) USER'S DETAILS-----------------
 async function updateUser (req,res){
-    const{ user_name ,full_name , phone_number, email, password , isAdmin , isDeleted , isSent} = req.body
-    const user_id = req.params.id
+    const{ user_name ,full_name , phone_number, email, password } = req.body
+    const id = req.params.id
     try{
         let pool = await mssql.connect(config)
         await pool.request()
-        .input('user_id', mssql.Int, user_id)
+        .input('id', mssql.VarChar, id)
         .input('user_name', mssql.VarChar, user_name)
         .input('full_name', mssql.VarChar, full_name)
         .input('phone_number', mssql.VarChar, phone_number)
         .input('email', mssql.VarChar, email)
         .input('password', mssql.VarChar, password)
-        .input('isAdmin', mssql.Bit, isAdmin)
-        .input('isDeleted', mssql.Bit, isDeleted)
-        .input('isSent', mssql.Bit, isSent)
         .execute('updateUser')
         res.json("User Updated Successfully")
 
