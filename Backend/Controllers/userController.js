@@ -2,16 +2,16 @@ const mssql = require('mssql')
 const config = require('../Configuration/dbconfig')
 const { v4: uuidv4 } = require('uuid');
 const { validation } = require ("../Helpers/validation.js")
+const bcrypt = require('bcrypt');
 
 //------------ CREATING A NEW USER -----------------
 async function createUser (req,res){
     const{ user_name ,full_name , phone_number, email, password } = req.body;
 
 //------------ HASHING PASSWORDS WITH BCRYPT -------
-const salt = await bcrypt.genSalt(10)
+const salt = await bcrypt.genSalt(10);
 const hashedPassword = await bcrypt.hash(password, salt);
-const { err } = validationSchema.validate(req.body);
-if ( err ) return res.status(404).send({ success: false, message: error });
+
 
 //------------ VALIDATING THE USER ENTRIES ----------
     const { error } = validation(req.body)
