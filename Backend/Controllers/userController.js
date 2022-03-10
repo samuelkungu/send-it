@@ -39,7 +39,7 @@ const bcrypt = require('bcrypt');
             }
 
 //------------------------------- LOGIN USER ----------------------------
-                async function createUser (req,res){
+                async function loginUser (req,res){
                     const{ user_name , password } = req.body;
 
 
@@ -153,5 +153,6 @@ const bcrypt = require('bcrypt');
                     getAUser,
                     createUser,
                     updateUser,
-                    deleteUser
+                    deleteUser,
+                    loginUser
                 }
