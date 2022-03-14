@@ -2,9 +2,9 @@
 
 
 
-### Login Page  <br/>
+### Log In  <br/>
  ![alt text](https://github.com/samuelkungu/send-it/blob/main/Frontend/public/images/login.png?raw=true)
-### SignIn  Page  <br/>
+### Sign In  <br/>
  ![alt text](https://github.com/samuelkungu/send-it/blob/main/Frontend/public/images/register.png?raw=true)
  
 ### SendIT is a courier service that helps users deliver parcels to different destinations. <br/>
