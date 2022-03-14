@@ -3,11 +3,9 @@ import NavBar from './NavBar';
 
 function Home() {
   return (
-    <div>
-
-    <NavBar/>
-
-    </div>
+   <div class="container">
+   <NavBar/>
+</div>
   )
 }
 

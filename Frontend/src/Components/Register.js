@@ -2,11 +2,14 @@ import React from 'react'
 import NavBar from './NavBar';
 
 function Register() {
-  return (
-    <div className='Register'>
-        
-        <NavBar/>
 
+  
+
+
+  return (
+    <div className="wrapper">
+    <div className="inner">
+    <NavBar/>
         <form>
                
                 <div className="form-group">
@@ -24,14 +27,16 @@ function Register() {
                 <div className="form-group">
                     <label>Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" />
+
                 </div>
-                <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                <button type="submit" className="btn btn-primary btn-block mt-1">Sign Up</button>
                 <p className="forgot-password text-right">
                     Already registered <a href="#">sign in?</a>
                 </p>
             </form>
-        
     </div>
+    </div>
+   
   )
 }
 
