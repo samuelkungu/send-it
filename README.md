@@ -1,7 +1,14 @@
 
+
+
+
+### Login Page  <br/>
+ ![alt text](https://github.com/samuelkungu/send-it/blob/main/Frontend/public/images/login.png?raw=true)
+### SignIn  Page  <br/>
+ ![alt text](https://github.com/samuelkungu/send-it/blob/main/Frontend/public/images/register.png?raw=true)
+ 
 ### SendIT is a courier service that helps users deliver parcels to different destinations. <br/>
 SendIT provides courier quotes based on weight categories. <br/>
-
 ### Features of the application <br/>
 1. Allow users to create an account and log in.  <br/>
 2. Allow users to create a parcel delivery order.  <br/>
@@ -19,4 +26,3 @@ specific user <br/>
 6. POST/user - Register user <br/>
 7. POST/id - Login user <br/>
 8. DELETE/id - Delete a specific user or parcel  <br/>
- 
