@@ -13,12 +13,12 @@ function Register() {
         <form>
                
                 <div className="form-group">
-                    <label>First name</label>
-                    <input type="text" className="form-control" placeholder="First name" />
+                    <label>Username</label>
+                    <input type="text" className="form-control" placeholder="Username" />
                 </div>
                 <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
+                    <label>Full name</label>
+                    <input type="text" className="form-control" placeholder="Full name" />
                 </div>
                 <div className="form-group">
                     <label>Email address</label>
