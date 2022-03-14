@@ -31,7 +31,7 @@ function Register() {
                 </div>
                 <button type="submit" className="btn btn-primary btn-block mt-1">Sign Up</button>
                 <p className="forgot-password text-right">
-                    Already registered <a href="#">sign in?</a>
+                    Already registered <a href="/LoginPage">Sign in?</a>
                 </p>
             </form>
     </div>

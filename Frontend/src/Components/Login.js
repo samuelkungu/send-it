@@ -39,8 +39,11 @@ function Login() {
                         <label>Remember me</label>
         </div>
 
-            <button button type="submit" className="btn btn-primary btn-block "
+            <button button type="submit" className="btn btn-primary  btn-block "
             onClick={handleSubmit} disabled={!validateForm()}> Login </button>
+            <p className="forgot-password text-right">
+                    You don't have an account?<a href="/RegisterPage">Register?</a>
+                </p>
 
             
         </form>
