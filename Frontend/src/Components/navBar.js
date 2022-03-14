@@ -7,7 +7,7 @@ function NavBar() {
  
     <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
-        <ul>
+        <ul className="navbar-nav ml-auto">
             <li className="nav-item">
                     <Link className="nav-link" to={"/Home"}>Home</Link>
             </li>

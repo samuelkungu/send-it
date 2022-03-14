@@ -18,22 +18,27 @@ function Login() {
   return (
        <div>
         <NavBar/>
-        <div className='Login'>
+        <div className="Login">
         <form >
-            <input type="text"
-            autoFocus  
-            value={email} 
-            name="email"
-            placeholder="Enter your Email..."
-            onChange={(e) => setEmail(e.target.value)} />
+        <div className="form-group">
+            <label>Email address</label>
+            <input type="email"  className="form-control" placeholder="Enter email"  name="email"
+            autoFocus   value={email}  onChange={(e) => setEmail(e.target.value)} />
+        </div>
 
-            <input type="text" 
-            value={password} 
-            name="password"
-            placeholder="Enter your Password..."  
-            onChange={(e) => setPassword(e.target.value)} />
+        <div className="form-group">
+            <label>Password</label>
+            <input  type="password" className="form-control" placeholder="Enter password" name="password" 
+            value={password}  onChange={(event) => setPassword(event.target.value)} />
+        </div>
 
-            <button onClick={handleSubmit} className="btn btn-primary" disabled={!validateForm()}> Login </button>
+        <div className="form-group">
+                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                        <label>Remember me</label>
+        </div>
+
+            <button button type="submit" className="btn btn-primary btn-block"
+            onClick={handleSubmit} disabled={!validateForm()}> Login </button>
 
             
         </form>
