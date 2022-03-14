@@ -1,14 +1,14 @@
 import React from 'react'
 import NavBar from './NavBar';
 
-function Home() {
+function Register() {
   return (
     <div>
-
-    <NavBar/>
-
+        
+        <NavBar/>
+        
     </div>
   )
 }
 
-export default Home;
+export default Register;
