@@ -15,11 +15,13 @@ function Login() {
     alert(`The email you entered was: ${email}`)
   }
 
-  return (
+  return (<div>
+     <NavBar/>
+  
       
         <div className="wrapper">
         <div className="inner">
-        <NavBar/>
+       
         <div className="Login">
         <form>
         <div className="form-group">
@@ -51,7 +53,7 @@ function Login() {
       </div>
     </div>
     
-  )
+</div>)
 }
 
 export default Login;

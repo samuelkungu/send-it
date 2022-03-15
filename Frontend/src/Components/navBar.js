@@ -4,7 +4,7 @@ import { Link} from 'react-router-dom';
 function NavBar() {
   return (
  
-    <nav className="navbar navbar-light fixed-top">
+    <nav className="navbar navbar-light">
       <h4 className='ms-4 mt-2'>Send It</h4>
         <div className="container  navbar-expand-lg  ">
         <ul className="navbar-nav ml-auto ">

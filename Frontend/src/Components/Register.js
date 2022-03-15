@@ -4,12 +4,12 @@ import NavBar from './NavBar';
 function Register() {
 
   
-
-
-  return (
+    return (<div>
+        <NavBar/>
+   
     <div className="wrapper">
     <div className="inner">
-    <NavBar/>
+    
         <form>
                
                 <div className="form-group">
@@ -36,8 +36,7 @@ function Register() {
             </form>
     </div>
     </div>
-   
-  )
+</div>)
 }
 
 export default Register;
