@@ -112,6 +112,10 @@ body, html, .App, #root, .wrapper {
   border: 0;
   color: rgba(var(--text-color));
 }
+
+.card button{
+  
+}
 /* 
 li {
   background-image: linear-gradient( to right, #54b3d6, #54b3d6 50%, #000 50% );
