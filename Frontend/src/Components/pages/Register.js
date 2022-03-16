@@ -1,30 +1,27 @@
 import React from 'react'
-import NavBar from './NavBar';
-
 function Register() {
 
   
     return (<div>
-        <NavBar/>
    
     <div className="wrapper">
     <div className="inner">
     
-        <form>
+        <form className=''>
                
-                <div className="form-group">
+                <div className="form-group p-2">
                     <label>Username</label>
                     <input type="text" className="form-control" placeholder="Username" />
                 </div>
-                <div className="form-group">
+                <div className="form-group p-2">
                     <label>Full name</label>
                     <input type="text" className="form-control" placeholder="Full name" />
                 </div>
-                <div className="form-group">
+                <div className="form-group p-2">
                     <label>Email address</label>
                     <input type="email" className="form-control" placeholder="Enter email" />
                 </div>
-                <div className="form-group">
+                <div className="form-group p-2">
                     <label>Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" />
 

@@ -13,11 +13,19 @@ function NavBar() {
             </li>
             
             <li className="nav-item ">
-                    <Link className="nav-link" to={"/Services"}>Services</Link>
+                    <Link className="nav-link" to={"/CreateParcel"}>Create Parcel</Link>
             </li>
 
             <li className="nav-item ">
                     <Link className="nav-link" to={"/ParcelTracking"}>Parcel Tracking</Link>
+            </li>
+
+            <li className="nav-item ">
+                    <Link className="nav-link" to={"/Services"}>Services</Link>
+            </li>
+
+            <li className="nav-item ">
+                    <Link className="nav-link" to={"/About"}>About</Link>
             </li>
             
         </ul>

@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
-import './css/main.css'
-import NavBar from './NavBar';
+import '../css/main.css'
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
+  
   function validateForm() {
     return email.length >0 && password.length >0;
   }
 
+
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`The email you entered was: ${email}`)
   }
 
   return (<div>
-     <NavBar/>
   
       
         <div className="wrapper">
@@ -24,19 +23,20 @@ function Login() {
        
         <div className="Login">
         <form>
-        <div className="form-group">
+        <div className="form-group p-2 ">
             <label>Email address</label>
             <input type="email"  className="form-control" placeholder="Enter email"  name="email"
             autoFocus   value={email}  onChange={(e) => setEmail(e.target.value)} />
+            
         </div>
 
-        <div className="form-group">
+        <div className="form-group p-2 ">
             <label>Password</label>
             <input  type="password" className="form-control " placeholder="Enter password" name="password" 
             value={password}  onChange={(event) => setPassword(event.target.value)} />
         </div>
 
-        <div className="form-group">
+        <div className="form-group p-2 ">
                         <input type="checkbox" className="custom-control-input" id="customCheck1" />
                         <label>Remember me</label>
         </div>

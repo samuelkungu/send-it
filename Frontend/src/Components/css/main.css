@@ -10,14 +10,16 @@
   --pink-light: #efa2b4;
   --cyan-light: #aef1ee;
   --white : #ffffff;
+  --purple : #cc2b5e;
+  --shades : #bdc3c7;
+  --grey : #2c3e50;
+  --love : #753a88;
   --white-alpha-40: rgba(255,255,255,0.40);
   --white-alpha-25: rgba(255,255,255,0.25);
   --backdrop-filter-blur: blur(5px);
-   /* violet */
    --primary-color: 111, 76, 255;
-
-   /* white */
    --text-color: 256, 256, 256;
+   
    } 
 
 
@@ -36,12 +38,13 @@
     Custom
 ---------------- */
 body {
-  background-image: linear-gradient( to bottom right, var(--pink-light)  , var(--cyan-light) );
+  background-image: linear-gradient( to bottom right, var(--shades)  , var(--cyan-light) );
+  /* background-color: #ffffff; */
   min-height: 100vh;
   display: flex;
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
-  height: 200%;
+  height: 100%;
   width: 100%;
 }
 h1,h2,h3,h4,h5,h6,label,span {
@@ -62,14 +65,6 @@ html, .App, #root, .wrapper {
  background-color: var(--blue-dark);
 }
 
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-  margin : 40px 10px 10px 10px;
-}
 .home{
   display: flex;
   justify-content: center;
@@ -77,12 +72,20 @@ html, .App, #root, .wrapper {
   text-align: left;
   margin : 10px 10px 10px 10px;
 }
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  margin : 20px 10px 10px 10px;
+}
+
 .inner {
   width: 450px;
   margin: auto;
   background: #ffffff;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-  padding: 40px 55px 45px 55px;
+  padding: 20px 55px 45px 55px;
   border-radius: 15px;
   transition: all .3s;
 }
@@ -116,12 +119,8 @@ html, .App, #root, .wrapper {
   color: rgba(var(--text-color));
 }
 
-.card button{
-
-}
-/* 
 li {
-  background-image: linear-gradient( to right, #54b3d6, #54b3d6 50%, #000 50% );
+  background-image: linear-gradient( to right, var( --white ), var( --white ) 50%, #000 50% );
   background-size: 200% 100%;
   background-position: -100%;
   -webkit-background-clip: text;
@@ -142,5 +141,9 @@ li:hover {
   background-position: 0;
  }
  li:hover::before {
-  width: 100%;
-} */
+  width: 0;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.3); 
+}

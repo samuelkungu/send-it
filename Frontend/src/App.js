@@ -1,22 +1,31 @@
 import './App.css';
-import { BrowserRouter,Routes,  Route, } from "react-router-dom";
-import Home from './Components/Home';
-import Login from './Components/Login';
-import Register from './Components/Register';
+import { BrowserRouter,Routes, Route, } from "react-router-dom";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import ParcelTracking from './Components/ParcelTracking';
-import Services from './Components/Services';
+import Home from './Components/pages/Home';
+import Login from './Components/pages/Login';
+import Register from './Components/pages/Register';
+import ParcelTracking from './Components/pages/ParcelTracking';
+import Services from './Components/pages/Services';
+import CreateParcel from './Components/pages/CreateParcel';
+import NavBar from './Components/pages/NavBar';
+import About from './Components/pages/About';
+
 
 function App() {
   return (
     
     <BrowserRouter>
+    < NavBar/>
     <Routes>
       <Route path='' element={<Home/>} />
+      <Route path='/CreateParcel' element={<CreateParcel/>} />
       <Route path='/ParcelTracking' element={<ParcelTracking/>} />
       <Route path='/Services' element={<Services/>} />
+      <Route path='/About' element={<About/>} />
       <Route path='/LoginPage' element={<Login/>} />
       <Route path="/RegisterPage" element={<Register/>} />
+
+      
 
     </Routes>
     </BrowserRouter>
