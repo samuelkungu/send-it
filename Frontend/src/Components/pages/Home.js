@@ -27,7 +27,7 @@ function Home() {
     
 
       
-        <div className='card mt-4 ms-4 pt-2 w-50 d-flex align-self-center '>
+        <div className='card mt-4 ms-4 pt-2 w-80 d-flex align-self-center '>
               <h4 className='d-flex justify-content-center'>How It Works?</h4>
               {/* ------------------------
                       Carousel
