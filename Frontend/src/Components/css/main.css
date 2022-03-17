@@ -155,10 +155,12 @@ li:hover {
 .contact-cards * {
   box-sizing: border-box;
 }
-
+.card-contact{
+   /* background-image: url(../../../public/images/others-bg.jpg); */
+}
 .card-contact:hover{
-  /* background-image: linear-gradient(to right, var(--pink-light), var(--cyan-light)); */
-  background-image: url(../../../public/images/home-bg.jpg);
+  /* background-image: var(--white); */
+  background-image: url(../../../public/images/others-bg.jpg);
 }
 /* Float four columns side by side */
 .contact-cards .column {

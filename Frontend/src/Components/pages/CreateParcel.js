@@ -8,6 +8,32 @@ function CreateParcel() {
         <div className='home pt-2 container-fluid'>
      
             <div className='card d-flex  flex-column border border-info mt-4 ms-4 pt-2 col-10 '>
+
+            <div className='card-body d-flex flex-row '>
+                        <div className='col-5'>
+                            <p className=''>Sender's Details</p>               
+                            <input type=" text" className='' placeholder='Area'/>
+                            <input type=" text" className='ms-2' placeholder='Address'/>
+                        </div>
+                        <div className='col-5'>
+                            <p className=''>Receiver's Details</p> 
+                            <input type=" text" className='' placeholder='Area'/>
+                            <input type=" text" className='ms-2' placeholder='Address'/>
+                        </div>
+              </div>
+              <div className='card-body d-flex flex-row '>
+                        <div className='col-5'>
+                                       
+                            <input type=" text" className='' placeholder='Area'/>
+                            <input type=" text" className='ms-2' placeholder='Address'/>
+                        </div>
+                        <div className='col-5'>
+                           
+                            <input type=" text" className='' placeholder='Area'/>
+                            <input type=" text" className='ms-2' placeholder='Address'/>
+                        </div>
+              </div>
+
               <div className='card-body d-flex flex-row '>
                         <div className='col-5'>
                             <p className=''>Collection From</p>               
