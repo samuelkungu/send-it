@@ -9,7 +9,7 @@ function Contact() {
 <div className='d-flex flex-column' >
             <div className='contact p-3'>
                 <h3> Contact Us </h3>
-                  <p> Next day deliveries to main European, US and Canadian cities. <br/>
+                  <p> Next day deliveries to Nairobi, ,Nyeri towns. <br/>
                     Quote a price and get best parcel delivery offers only</p>
             </div>
 
@@ -37,7 +37,7 @@ function Contact() {
                     <div className='m-2 p-2 col '>
                           <h5>Sales</h5>
                           <p>+254 700 773 041</p>
-                          <p>sale@sendit.com</p>
+                          <p>sales@sendit.com</p>
                     </div>
                     <div className='m-2 p-2 col  '>
                           <h5>Book Keeping</h5>

@@ -25,23 +25,14 @@
    } 
 
 
-   /* ---------------------
-      Global
-    ---------------------- */
-   
-@media all and (min-width: 480px) {
-  
-}@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
-* {
-  box-sizing: border-box;
-}
 
 /* -------------
     Custom
 ---------------- */
 body {
-  background-image: linear-gradient( to bottom right, var(--shades)  , var(--cyan-light) );
+  /* background-image: linear-gradient( to bottom right, var(--shades)  , var(--cyan-light) ); */
   /* background-color: #ffffff; */
+  background-image: url(../../../public/images/others-bg.jpg);
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -67,12 +58,13 @@ html, .App, #root, .wrapper {
  background-color: var(--blue-dark);
 }
 .home-page .card{
-  background-image: url(../../../public/images/others.jpg);
+  background-image: url(../../../public/images/others-bg.jpg); 
   /* background-image: url(../../../public/images/home-bg.jpg); */
+  /* background-image: url(../../../public/images/woman.webp); */
 }
 .page .card{
-  /* background-image: url(../../../public/images/others.jpg); */
-  background-image: url(../../../public/images/home-bg.jpg);
+  background-image: url(../../../public/images/others-bg.jpg);
+ 
 }
 .home{
   display: flex;
@@ -201,4 +193,43 @@ li:hover {
     display: block;
     margin-bottom: 20px;
   }
+}
+
+
+   /* ---------------------
+      Global
+    ---------------------- */
+   
+    @media all and (min-width: 480px) {
+  
+    }@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+    * {
+      box-sizing: border-box;
+    }
+
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar ul:not(:first-child) {display: none;}
+  .navbar li:not(:first-child) {display: none;}
+  
 }
