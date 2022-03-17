@@ -5,7 +5,7 @@ import Home from './Components/pages/Home';
 import Login from './Components/pages/Login';
 import Register from './Components/pages/Register';
 import ParcelTracking from './Components/pages/ParcelTracking';
-import Services from './Components/pages/Services';
+import Contact from './Components/pages/Contact';
 import CreateParcel from './Components/pages/CreateParcel';
 import NavBar from './Components/pages/NavBar';
 import About from './Components/pages/About';
@@ -20,8 +20,8 @@ function App() {
       <Route path='' element={<Home/>} />
       <Route path='/CreateParcel' element={<CreateParcel/>} />
       <Route path='/ParcelTracking' element={<ParcelTracking/>} />
-      <Route path='/Services' element={<Services/>} />
       <Route path='/About' element={<About/>} />
+      <Route path='/Contact' element={<Contact/>} />
       <Route path='/LoginPage' element={<Login/>} />
       <Route path="/RegisterPage" element={<Register/>} />
 

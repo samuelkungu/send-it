@@ -19,7 +19,7 @@ function Home() {
              
                 
               <div className='col-md-4 px-0'>
-                <img  className='img-fluid rounded-circle' src='/images/home.jpg' alt='logo'/>
+                <img  className='img-fluid rounded-circle' src='/images/parcel1.jpg ' alt='logo'/>
                </div>
       </div>
     </div>

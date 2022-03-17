@@ -21,12 +21,13 @@ function NavBar() {
             </li>
 
             <li className="nav-item ">
-                    <Link className="nav-link" to={"/Services"}>Services</Link>
+                    <Link className="nav-link" to={"/About"}>About</Link>
             </li>
 
             <li className="nav-item ">
-                    <Link className="nav-link" to={"/About"}>About</Link>
+                    <Link className="nav-link" to={"/Contact"}>Contact Us</Link>
             </li>
+
             
         </ul>
         <ul className='navbar-nav navbar-right '> 
