@@ -67,6 +67,11 @@ html, .App, #root, .wrapper {
  background-color: var(--blue-dark);
 }
 .home-page .card{
+  background-image: url(../../../public/images/others.jpg);
+  /* background-image: url(../../../public/images/home-bg.jpg); */
+}
+.page .card{
+  /* background-image: url(../../../public/images/others.jpg); */
   background-image: url(../../../public/images/home-bg.jpg);
 }
 .home{
@@ -160,7 +165,8 @@ li:hover {
 }
 
 .card-contact:hover{
-  background-image: linear-gradient(to right, var(--pink-light), var(--cyan-light));
+  /* background-image: linear-gradient(to right, var(--pink-light), var(--cyan-light)); */
+  background-image: url(../../../public/images/home-bg.jpg);
 }
 /* Float four columns side by side */
 .contact-cards .column {

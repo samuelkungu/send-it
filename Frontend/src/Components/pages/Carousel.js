@@ -2,7 +2,7 @@ import React from 'react'
 
 function Carousel() {
   return (
-    <div>
+    <div className='page '>
         
 
     <div id="collapse" class="carousel slide" data-bs-ride="carousel">

@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-<div class="home pt-2 container-fluid">
+<div class=" page home pt-2 container-fluid">
 
        <div className='card mt-4 mx-4  pt-4  '>
             <div className='card-body'>

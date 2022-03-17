@@ -1,7 +1,8 @@
 import React from 'react'
 
 function ParcelTracking() {
-  return (<div>
+  return (
+<div className='page '>
 
      <div class="home pt-2 container-fluid"> 
 

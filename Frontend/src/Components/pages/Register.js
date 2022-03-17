@@ -2,7 +2,8 @@ import React from 'react'
 function Register() {
 
   
-    return (<div>
+    return (
+        <div className='page '>
    
     <div className="wrapper">
     <div className="inner">

@@ -15,8 +15,7 @@ function Login() {
     event.preventDefault();
   }
 
-  return (<div>
-  
+  return (<div className='page '>
       
         <div className="wrapper">
         <div className="inner">

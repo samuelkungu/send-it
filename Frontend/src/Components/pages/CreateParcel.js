@@ -1,7 +1,8 @@
 import React from 'react'
 
 function CreateParcel() {
-    return (<div>
+    return (
+    <div className='page '>
        
         
         <div className='home pt-2 container-fluid'>
