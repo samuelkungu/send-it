@@ -66,9 +66,9 @@ html, .App, #root, .wrapper {
 .bkg-dark{
  background-color: var(--blue-dark);
 }
-/* .home-page .card{
-  background-image: url(/images/home-background.jpg);
-} */
+.home-page .card{
+  background-image: url(../../../public/images/home-bg.jpg);
+}
 .home{
   display: flex;
   justify-content: center;
