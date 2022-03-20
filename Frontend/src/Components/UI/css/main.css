@@ -32,7 +32,7 @@
 body {
   /* background-image: linear-gradient( to bottom right, var(--shades)  , var(--cyan-light) ); */
   /* background-color: #ffffff; */
-  background-image: url(../../../public/images/others-bg.jpg);
+  background-image: url(../../../../public/images/others-bg.jpg);
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -58,12 +58,12 @@ html, .App, #root, .wrapper {
  background-color: var(--blue-dark);
 }
 .home-page .card{
-  background-image: url(../../../public/images/others-bg.jpg); 
-  /* background-image: url(../../../public/images/home-bg.jpg); */
-  /* background-image: url(../../../public/images/woman.webp); */
+  background-image: url(../../../../public/images/others-bg.jpg); 
+  /* background-image: url(../../../../public/images/home-bg.jpg); */
+  /* background-image: url(../../../../public/images/woman.webp); */
 }
 .page .card{
-  background-image: url(../../../public/images/others-bg.jpg);
+  background-image: url(../../../../public/images/others-bg.jpg);
  
 }
 .home{
@@ -121,7 +121,8 @@ html, .App, #root, .wrapper {
 }
 
 li {
-  background-image: linear-gradient( to right, var( --white ), var( --white ) 50%, #000 50% );
+  /* background-image: linear-gradient( to right, var( --white ), var( --white ) 50%, #000 50% ); */
+  background-image: linear-gradient( to right,  rgb(1 134 218), rgb(182 49 167) 50%, #000000 50%  );
   background-size: 200% 100%;
   background-position: -100%;
   -webkit-background-clip: text;
@@ -156,11 +157,11 @@ li:hover {
   box-sizing: border-box;
 }
 .card-contact{
-   /* background-image: url(../../../public/images/others-bg.jpg); */
+   /* background-image: url(../../../../public/images/others-bg.jpg); */
 }
 .card-contact:hover{
   /* background-image: var(--white); */
-  background-image: url(../../../public/images/others-bg.jpg);
+  background-image: url(../../../../public/images/others-bg.jpg);
 }
 /* Float four columns side by side */
 .contact-cards .column {

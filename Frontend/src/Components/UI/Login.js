@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import '../css/main.css'
 
-function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+
+function LoginView() {
+  const [email, setEmail] = useState([]);
+  const [password, setPassword] = useState([]);
   
   
   function validateForm() {
@@ -55,4 +55,4 @@ function Login() {
 </div>)
 }
 
-export default Login;
+export default LoginView;

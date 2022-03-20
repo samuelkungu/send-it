@@ -1,7 +1,8 @@
 import React from 'react'
 import Carousel from './Carousel';
+import './css/main.css'
 
-function Home() {
+function HomeView() {
   return (<div className='home-page '>
   <div class="home pt-2 container-fluid">
  
@@ -46,4 +47,4 @@ function Home() {
 </div>)
 }
 
-export default Home;
+export default HomeView;

@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
-function CreateParcel() {
+function CreateParcelView() {
+
+        const [data, setData] = useState([]);
+        const [filter, setFilter] = useState(data);
+        const [loading, setLoading] = useState(false);
+        let componentmounted = true;
+
+
+
     return (
     <div className='page '>
        
@@ -89,4 +97,4 @@ function CreateParcel() {
     </div>)
      }
 
-export default CreateParcel
+export default CreateParcelView;
