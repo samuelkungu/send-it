@@ -54,19 +54,15 @@ html, .App, #root, .wrapper {
   font-weight: 600;
 }
 
-.home-page .card{
-  background-image: url(../../../public/images/others-bg.jpg); 
-  /* background-image: url(../../../public/images/home-bg.jpg); */
-  /* background-image: url(../../../public/images/woman.webp); */
-}
-.page .card{
-  background-image: url(../../../public/images/others-bg.jpg);
-  
-}
 .card{
-  width: 80%;
+  display: flex;
+  background-image: url(../../../public/images/others-bg.jpg); 
+  width: 95%;
   margin: 20px 20px 0px 20px;
   padding: 20px 0px 0px 0px;
+}
+.card-body{
+  
 }
 
 .home{
@@ -75,6 +71,7 @@ html, .App, #root, .wrapper {
   flex-direction: column;
   text-align: left;
   margin : 10px 10px 10px 10px;
+  padding : 10px 10px 10px 10px;
   width: 100%;
 }
 .wrapper {

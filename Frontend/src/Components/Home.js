@@ -7,7 +7,7 @@ function HomeView() {
   <div class="home container-fluid">
  
     <div className='card'>
-              <div className='card-body d-flex flex-column justify-content-between'>
+              <div className='card-body flex-column justify-content-between'>
 
                 <div className='align-self-center'>
                     
@@ -33,8 +33,8 @@ function HomeView() {
     
 
       
-        <div className='card d-flex align-self-center '>
-              <h4 className='d-flex justify-content-center'>How It Works?</h4>
+        <div className='card align-self-center '>
+              <h4 className='d-flex w-80 justify-content-center'>How It Works?</h4>
               
 
               <Carousel/>
