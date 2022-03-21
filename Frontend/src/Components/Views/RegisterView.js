@@ -1,7 +1,6 @@
 import React from 'react'
-function RegisterView() {
 
-  
+function RegisterView() {
     return (
         <div className='page '>
    
@@ -37,4 +36,4 @@ function RegisterView() {
 </div>)
 }
 
-export default RegisterView;
+export default RegisterView

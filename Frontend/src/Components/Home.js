@@ -1,12 +1,12 @@
 import React from 'react'
-import Carousel from './Carousel';
+import Carousel from './Views/Carousel';
 import './css/main.css'
 
 function HomeView() {
   return (<div className='home-page '>
-  <div class="home pt-2 container-fluid">
+  <div class="home container-fluid">
  
-    <div className=' card mt-4 mx-4  pt-4  '>
+    <div className='card'>
               <div className='card-body d-flex flex-column justify-content-between'>
 
                 <div className='align-self-center'>
@@ -33,11 +33,9 @@ function HomeView() {
     
 
       
-        <div className='card mt-4 ms-4 pt-2 w-80 d-flex align-self-center '>
+        <div className='card d-flex align-self-center '>
               <h4 className='d-flex justify-content-center'>How It Works?</h4>
-              {/* ------------------------
-                      Carousel
-              ------------------------- */}
+              
 
               <Carousel/>
               

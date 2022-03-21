@@ -1,11 +1,11 @@
 import { combineReducers, createStore } from "redux"
 import { composeWithDevTools } from "redux-devtools-extension/developmentOnly"
 import userReducer from "./reducers/userReducer";
-import parcelsReducer from "./reducers/parcelsReducer";
+import parcelReducer from "./reducers/parcelReducer";
 
 const rootReducer = combineReducers({
         user: userReducer,
-        parcels: parcelsReducer,
+        parcel: parcelReducer,
 
 });
 

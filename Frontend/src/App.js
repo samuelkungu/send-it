@@ -1,15 +1,15 @@
 import './App.css';
-// import './Components/UI/css/main.css'
+// import './Components/css/main.css'
 import { BrowserRouter,Routes, Route, } from "react-router-dom";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Home from './Components/UI/Home';
-import Login from './Components/UI/Login';
-import Register from './Components/UI/Register';
-import ParcelTracking from './Components/UI/ParcelTracking';
-import Contact from './Components/UI/Contact';
-import CreateParcel from './Components/UI/CreateParcel';
-import NavBar from './Components/UI/NavBar';
-import About from './Components/UI/About';
+import Home from './Components/Home';
+import Login from './Components/Login';
+import Register from './Components/Register';
+import ParcelTracking from './Components/ParcelTracking';
+import Contact from './Components/Contact';
+import CreateParcel from './Components/CreateParcel';
+import NavBar from './Components/NavBar';
+import About from './Components/About';
 
 
 function App() {

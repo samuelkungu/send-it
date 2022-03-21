@@ -32,7 +32,7 @@
 body {
   /* background-image: linear-gradient( to bottom right, var(--shades)  , var(--cyan-light) ); */
   /* background-color: #ffffff; */
-  background-image: url(../../../../public/images/others-bg.jpg);
+  background-image: url(../../../public/images/others-bg.jpg);
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -54,24 +54,28 @@ html, .App, #root, .wrapper {
   font-weight: 600;
 }
 
-.bkg-dark{
- background-color: var(--blue-dark);
-}
 .home-page .card{
-  background-image: url(../../../../public/images/others-bg.jpg); 
-  /* background-image: url(../../../../public/images/home-bg.jpg); */
-  /* background-image: url(../../../../public/images/woman.webp); */
+  background-image: url(../../../public/images/others-bg.jpg); 
+  /* background-image: url(../../../public/images/home-bg.jpg); */
+  /* background-image: url(../../../public/images/woman.webp); */
 }
 .page .card{
-  background-image: url(../../../../public/images/others-bg.jpg);
- 
+  background-image: url(../../../public/images/others-bg.jpg);
+  
 }
+.card{
+  width: 80%;
+  margin: 20px 20px 0px 20px;
+  padding: 20px 0px 0px 0px;
+}
+
 .home{
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: left;
   margin : 10px 10px 10px 10px;
+  width: 100%;
 }
 .wrapper {
   display: flex;
@@ -79,6 +83,7 @@ html, .App, #root, .wrapper {
   flex-direction: column;
   text-align: left;
   margin : 20px 10px 10px 10px;
+  width: 100%;
 }
 
 .inner {
@@ -157,11 +162,12 @@ li:hover {
   box-sizing: border-box;
 }
 .card-contact{
-   /* background-image: url(../../../../public/images/others-bg.jpg); */
+   /* background-image: url(../../../public/images/others-bg.jpg); */
 }
 .card-contact:hover{
   /* background-image: var(--white); */
-  background-image: url(../../../../public/images/others-bg.jpg);
+  background-image: url(../../../public/images/others-bg.jpg);
+  width: 100%;
 }
 /* Float four columns side by side */
 .contact-cards .column {

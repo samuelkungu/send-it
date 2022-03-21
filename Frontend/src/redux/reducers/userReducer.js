@@ -3,7 +3,7 @@ import { REGISTER_USER , LOGIN_USER , SET_USER_ERROR , USER_LOG_OUT , USER_AUTH_
 const initialState = {
     isLoading: false,
     userData: [],
-    userError:[]
+    userError:""
 }
 
 const userReducer = ( state = initialState, action ) => {
@@ -22,7 +22,7 @@ const userReducer = ( state = initialState, action ) => {
 
                 case USER_AUTH_SUCCESS:
 
-                    return { ...state, userData: action.user, userError: [] };
+                    return { ...state, userData: action.user, userError: "" };
               
                 case SET_USER_ERROR:
 

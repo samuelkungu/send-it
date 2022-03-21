@@ -2,7 +2,7 @@ import { IS_LOADING , CREATE_PARCEL_SUCCESS , UPDATE_PARCEL_SUCCESS , SET_PARCEL
 
 const initialState = {
     parcelData: [],
-    error: [],
+    error: "",
     isLoading: false
   
 };
@@ -24,7 +24,7 @@ const parcelReducer = (state = initialState, action) => {
                 return {...state,error: action.error.msg,parcelData: [] };
 
             case UPDATE_PARCEL_SUCCESS:
-                
+
                 const mappedData = state.data.map((parcel) => {
                     if (parcel.id === action.parcel.id) {
                     parcel = action.parcel;
