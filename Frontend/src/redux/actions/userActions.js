@@ -7,4 +7,12 @@ const registerUser = () => {
    };
    };
 
-   export { registerUser };
+
+   const loginUser = () => {
+    return{
+        type : LOGIN_USER ,
+        payload : credentials,
+   };
+   };
+
+   export { registerUser, loginUser };
