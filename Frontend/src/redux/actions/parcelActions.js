@@ -1,22 +1,31 @@
+import { IS_LOADING , CREATE_PARCEL_SUCCESS , UPDATE_PARCEL_SUCCESS , SET_PARCEL_ERROR } from "../types";
+
 const isLoading = bool => {
     return{
-    type: actionTypes.IS_LOADING,
+    type: IS_LOADING,
     bool
   };
    };
   
   const createParcelSuccess  = () => {
     return{
-    type: actionTypes.CREATE_PARCEL_SUCCESS,
-    payload : [],
+    type: CREATE_PARCEL_SUCCESS,
+    parcel
   };
    };
   
   const updateParcelSuccess  = () => {
     return{
-    type: actionTypes.UPDATE_PARCEL_SUCCESS,
-    payload : [],
+    type: UPDATE_PARCEL_SUCCESS,
+    parcel
   };
    };
 
-   export {isLoading , createParcelSuccess , updateParcelSuccess};
+   const parcelsFailure  = () => {
+    return{
+    type: SET_PARCEL_ERROR,
+    error
+  };
+   };
+
+   export { isLoading , createParcelSuccess , updateParcelSuccess , parcelsFailure };

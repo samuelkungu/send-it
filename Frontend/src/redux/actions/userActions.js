@@ -1,9 +1,9 @@
-import { REGISTER_USER } from "../types";
+import { REGISTER_USER , LOGIN_USER , SET_USER_ERROR , USER_LOG_OUT , USER_AUTH_SUCCESS, IS_LOADING } from "../types";
 
 const registerUser = () => {
     return{
         type : REGISTER_USER ,
-        payload : register,
+        user
    };
    };
 
@@ -11,8 +11,45 @@ const registerUser = () => {
    const loginUser = () => {
     return{
         type : LOGIN_USER ,
-        payload : credentials,
+        user
    };
    };
 
-   export { registerUser, loginUser };
+   const isLoading = bool => {
+    return{
+    type: IS_LOADING,
+    bool
+ 
+    };
+    };
+
+  
+  export const userAuthSuccess = () => {
+    return{
+    type: USER_AUTH_SUCCESS,
+    user
+ 
+    };
+    };
+
+  
+  const userAuthFailure = () => {
+    return{
+    type: SET_USER_ERROR,
+    error
+
+    };
+    };
+
+  
+  const userLogoutSuccess = () => {
+    return{
+    type: USER_LOG_OUT,
+
+};
+};
+
+
+
+
+   export { registerUser, loginUser , isLoading , userAuthSuccess , userAuthFailure , userLogoutSuccess };

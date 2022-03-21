@@ -1,11 +1,11 @@
 import { combineReducers, createStore } from "redux"
 import { composeWithDevTools } from "redux-devtools-extension/developmentOnly"
-import loginReducer from "./reducers/loginReducer";
-import registerReducer from "./reducers/registerReducer";
+import userReducer from "./reducers/userReducer";
+import parcelsReducer from "./reducers/parcelsReducer";
 
 const rootReducer = combineReducers({
-        loginsState : loginReducer,
-        registerState : registerReducer,
+        user: userReducer,
+        parcels: parcelsReducer,
 
 });
 
