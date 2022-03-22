@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react"
 import {useDispatch, useSelector} from "react-redux"
-import { Link } from "react-router-dom"
 import { signup } from "../redux/actions/userActions"
 
-function Register({ history, location }) {
-  const dispatch = useDispatch()
+function SignUp() {
+  // const dispatch = useDispatch()
 
   const [userName, setUserName] = useState("")
   const [fullName, setFullName] = useState("")
@@ -13,30 +12,23 @@ function Register({ history, location }) {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [passwordsNotMatch, setPasswordsNotMatch] = useState(null)
 
-  const { loading, error, userInfo } = useSelector((state) => state.useRegister)
+  // const { loading, error, userInfo } = useSelector((state) => state.useRegister)
 
-  const redirect = location.search ? location.search.split("=")[1] : "/"
-
-  useEffect(() => {
-    if (userInfo) {
-      history.push(redirect)
-    }
-  }, [history, userInfo, redirect])
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (password !== confirmPassword) {
-      setPasswordsNotMatch("Passwords Not Match!")
-    } else {
-      let role = "client"
-      dispatch(signup(userName, fullName, email, password, role))
-    }
+    // if (password !== confirmPassword) {
+    //   setPasswordsNotMatch("Passwords Not Match!")
+    // } else {
+    //   let role = "client"
+    //   dispatch(signup(userName, fullName, email, password, role))
+    // }
   } 
 
 
      
     return (
-      <div className='page '>
+    <div className='page '>
    
     <div className="wrapper">
     <div className="inner">
@@ -76,10 +68,6 @@ function Register({ history, location }) {
                     Sign Up</button>
                 <p className="forgot-password text-right">
                     You already have an account?.
-                    <Link to={redirect ? `/login?redirect=${redirect}` : "/sigin"}>
-                    {" "}
-                    Sign In
-                    </Link>
                 </p>
                     
             </form>
@@ -88,4 +76,4 @@ function Register({ history, location }) {
 </div>)
 }
 
-export default Register
+export default SignUp

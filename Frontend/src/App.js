@@ -3,8 +3,8 @@ import './App.css';
 import { BrowserRouter,Routes, Route, } from "react-router-dom";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Home from './Components/Home';
-import Login from './Components/Login';
-import Register from './Components/Register';
+import SignIn from './Components/SignIn';
+import SignUp from './Components/SignUp';
 import ParcelTracking from './Components/ParcelTracking';
 import Contact from './Components/Contact';
 import CreateParcel from './Components/CreateParcel';
@@ -23,8 +23,8 @@ function App() {
       <Route path='/ParcelTracking' element={<ParcelTracking/>} />
       <Route path='/About' element={<About/>} />
       <Route path='/Contact' element={<Contact/>} />
-      <Route path='/LoginPage' element={<Login/>} />
-      <Route path="/RegisterPage" element={<Register/>} />
+      <Route path='/SignIn' element={<SignIn/>} />
+      <Route path="/SignUp" element={<SignUp/>} />
 
       
 

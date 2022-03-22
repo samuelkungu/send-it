@@ -123,7 +123,6 @@ html, .App, #root, .wrapper {
 }
 
 li {
-  /* background-image: linear-gradient( to right, var( --white ), var( --white ) 50%, #000 50% ); */
   background-image: linear-gradient( to right,  rgb(1 134 218), rgb(182 49 167) 50%, #000000 50%  );
   background-size: 200% 100%;
   background-position: -100%;
