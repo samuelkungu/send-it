@@ -3,7 +3,6 @@ import {useDispatch, useSelector} from "react-redux"
 import { signup } from "../redux/actions/userActions"
 
 function SignUp() {
-  // const dispatch = useDispatch()
 
   const [userName, setUserName] = useState("")
   const [fullName, setFullName] = useState("")
@@ -14,15 +13,16 @@ function SignUp() {
 
   // const { loading, error, userInfo } = useSelector((state) => state.useRegister)
 
-
+//   const dispatch = useDispatch();
+  const dispatch = email;
   const handleSubmit = (e) => {
     e.preventDefault()
-    // if (password !== confirmPassword) {
-    //   setPasswordsNotMatch("Passwords Not Match!")
-    // } else {
-    //   let role = "client"
-    //   dispatch(signup(userName, fullName, email, password, role))
-    // }
+    if (password !== confirmPassword) {
+      setPasswordsNotMatch("Passwords Not Match!")
+    } else {
+      
+      dispatch(signup(userName, fullName, email, password))
+    }
   } 
 
 

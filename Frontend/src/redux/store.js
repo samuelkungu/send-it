@@ -1,6 +1,6 @@
-import { createStore, combineReducers, applyMiddleware } from "redux"
-import thunk from "redux-thunk"
-import { composeWithDevTools } from "redux-devtools-extension"
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
 import {userLoginReducer,userSignUpReducer }from "./reducers/userReducer";
 import parcelReducer from "./reducers/parcelReducer";
 
@@ -17,7 +17,7 @@ const userInfoFromLocalStorage = localStorage.getItem("userInfo")
 
 const initialState = {
         userLogin: { userInfo: userInfoFromLocalStorage },
-        },
+       
       }
 
 const middleware = [thunk]
@@ -25,4 +25,4 @@ const middleware = [thunk]
 const store = createStore(rootReducer, initialState, composeWithDevTools(applyMiddleware(...middleware))
 )
 
-export default store
+export default store;
