@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react"
 import {useDispatch, useSelector} from "react-redux"
 import { signup } from "../redux/actions/userActions"
+import Validation from "./Validation";
 
 function SignUp() {
 
-  const [userData, setUserData] = useState({
-    username : " ",
-    fullName : " ",
-    email : " ",
-    password : " ",
-    username : " ",
-    confirmPassword : " ",
+  const [user, setUser] = useState({
+    userName:"",
+    fullName:"",
+    email:"",
+    password:"",
+    confirmPassword:"",
   });
   
 
@@ -18,15 +18,17 @@ function SignUp() {
 
   //   const dispatch = useDispatch();
   const handleChange = ( event ) =>{
-      setUserData({
-        ...userData , 
-        [event.target.name]: event.target.userData,
+      setUser({
+        ...user , 
+        [event.target.name]: event.target.user,
       });
     };
 
   const [errors, setErrors] = useState({});
+
   const  handleFormSubmit = ( event ) => {
     event.preventDefault();
+    setErrors(Validation(user));
   };
 
 
@@ -45,27 +47,32 @@ function SignUp() {
                 <div className="form-group p-2">
                     <label>Username</label>
                     <input type="text" className="form-control" placeholder="Username"
-                     value={userData.userName} onChange={handleChange}/>
+                     value={user.userName} onChange={handleChange}/>
+                     {errors.userName && <p className="error">{errors.userName}</p>}
                 </div>
                 <div className="form-group p-2">
                     <label>Full name</label>
                     <input type="text" className="form-control" placeholder="Full name"
-                     value={userData.fullName} onChange={handleChange} />
+                     value={user.fullName} onChange={handleChange} />
+                     {errors.fullName && <p className="error">{errors.fullName}</p>}
                 </div>
                 <div className="form-group p-2">
                     <label>Email address</label>
                     <input type="email" className="form-control" placeholder="Enter email"
-                      value={userData.email}  onChange={handleChange} />
+                      value={user.email}  onChange={handleChange} />
+                      {errors.email && <p className="error">{errors.email}</p>}
                 </div>
                 <div className="form-group p-2">
                     <label>Password</label>
                     <input type="password" className="form-control" placeholder="Enter password"  
-                     value={userData.password} onChange={handleChange} />
+                     value={user.password} onChange={handleChange} />
+                     {errors.password && <p className="error">{errors.password}</p>}
                 </div>
                 <div className="form-group p-2">
                     <label>Confirm Password</label>
                     <input type="password" className="form-control" placeholder="Confirm Password"  
-                     value={userData.confirmPassword} onChange={handleChange} />
+                     value={user.confirmPassword} onChange={handleChange} />
+                     {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
                 </div>
 
                 <button type="submit" className="btn btn-primary btn-block mt-1" onSubmit={handleFormSubmit} >

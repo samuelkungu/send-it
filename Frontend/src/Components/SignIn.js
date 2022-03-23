@@ -1,22 +1,32 @@
 import React, {useState } from 'react'
 import {useDispatch} from "react-redux"
-
 import { login } from "../redux/actions/userActions"
+import Validation from './Validation';
 
 function SignIn() {
     
-    // const dispatch = useDispatch();
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const [user, setUser] = useState({
+    email:"",
+    password:"",
+  });
   
-    const handleSubmit = (e) => {
-      e.preventDefault()
-    //   dispatch(login(email, password))
-    }
-  
-    function validateForm() {
-      return email.length >0 && password.length >0;
-    }
+
+  // const { loading, error, userInfo } = useSelector((state) => state.useRegister)
+
+  //   const dispatch = useDispatch();
+  const handleChange = ( event ) =>{
+      setUser({
+        ...user , 
+        [event.target.name]: event.target.user,
+      });
+    };
+
+  const [errors, setErrors] = useState({});
+
+  const  handleFormSubmit = ( event ) => {
+    event.preventDefault();
+    setErrors(Validation(user));
+  };
   
   
       return (
@@ -32,13 +42,15 @@ function SignIn() {
         <div className="form-group p-2 ">
           <label>Email address</label>
           <input type="email"  className="form-control" placeholder="Enter email"  name="email"
-          autoFocus   value={email} onChange={(e) => setEmail(e.target.value)}/>
+          autoFocus  value={user.email}  onChange={handleChange} />
+          {errors.email && <p className="error">{errors.email}</p>}
         </div>
   
         <div className="form-group p-2 ">
           <label>Password</label>
           <input  type="password" className="form-control " placeholder="Enter password" name="password" 
-           value={password} onChange={(e) => setPassword(e.target.value)} />
+          value={user.password} onChange={handleChange} />
+          {errors.password && <p className="error">{errors.password}</p>}
         </div>
   
         <div className="form-group p-2 ">
@@ -47,7 +59,7 @@ function SignIn() {
         </div>
   
         <button button type="submit" className="btn btn-primary btn-block"
-          onClick={handleSubmit} disabled={!validateForm()}> Login </button>
+          onClick={handleFormSubmit}> Login </button>
           <p className="forgot-password text-right"> 
                   
                      Forgot Password?.
