@@ -8,6 +8,8 @@ app.use('/users', require('./Routes/userRoutes'))
 // -------------- CONNECTING TO PARCELS ROUTES ------------------
 app.use('/parcels', require('./Routes/parcelRoutes'))
 
+
+
 app.post('/send', function(req, res, next) {
     const transporter = nodemailer.createTransport({
         host : 'smtp.gmail.com',
