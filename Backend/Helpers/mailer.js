@@ -7,27 +7,28 @@ require("dotenv").config
         secure : false,
         requireTLS : true,
         auth : {
-            user : "anuanirasmi@gmail.com",
-            pass : "anuanirasmi@21",
+            user: process.env.EMAIL_USERNAME,
+            pass: process.env.EMAIL_PASSWORD
         },
 
     });
  
     let mailOptions = {
-        from : "anuanirasmi@gmail.com",
-        to : "kungusamuel64@gmail.com",
+        from : process.env.EMAIL_USERNAME,
+        to : process.env.EMAIL_TO,
         subject : "Sending Email Using NodeJS",
-        text : "You,ve been Hacked :) ",
+        html :'<h2 style="color:#ff6600;">You,ve been Hacked :)</h2>',
         attachments : [{
             filename : "secure.txt",
             content : "This Is Not A Drill, I Repeat, This Is Not A Drill!",
         }]
     };
 
-    transporter.sendMail(mailOptions , function(error, info){
-        if (error){
-            console.log("Error");
-        } else {      
-                 console.log("Email sent : " + info.response);
-                } 
-    })
+    transport.sendMail(mailOptions, function(err, info) {
+        if (err) {
+          console.log(err)
+        } else {
+          console.log(info);
+        }
+    });
+
