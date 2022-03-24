@@ -1,6 +1,7 @@
 const express = require('express')
 const nodemailer = require('nodemailer');
 const app = express();
+var cron = require('node-cron');
 require("dotenv").config();
 // const email = require("./Helpers/email");
 
@@ -31,16 +32,19 @@ app.post('/send', function(req, res, next) {
         }]
     };
 
-    transporter.sendMail(mailOptions, function(err, info) {
-        if (err) {
-          console.log(err)
-        } else {
-          console.log(info);
-        }
-    });
+    cron.schedule('*/15 * * * * *', () => {
+        transporter.sendMail(mailOptions, function (err, info) {
+            if(err) 
+              console.log(err);
+            else
+              console.log("Email is sent to :" + process.env.EMAIL_TO);
+             });
+        });
+
+
   })
 
 
-app.listen(4005, ()=> {
-    console.log("Server Is Running on port 4005")
+app.listen(4000, ()=> {
+    console.log("Server Is Running on port 4000")
 })
