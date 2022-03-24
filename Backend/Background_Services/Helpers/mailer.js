@@ -14,10 +14,10 @@ require("dotenv").config
     });
  
     let mailOptions = {
-        from : process.env.EMAIL_USERNAME,
-        to : process.env.EMAIL_TO,
-        subject : "Sending Email Using NodeJS",
-        html :'<h2 style="color:#ff6600;">You,ve been Hacked :)</h2>',
+        from: process.env.EMAIL_USERNAME,
+        to:  `${req.body.email}`,
+        subject: `${req.body.name}`,
+        text: `${req.body.message}`,
         attachments : [{
             filename : "secure.txt",
             content : "This Is Not A Drill, I Repeat, This Is Not A Drill!",
