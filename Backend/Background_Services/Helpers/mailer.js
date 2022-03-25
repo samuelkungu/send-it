@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+var cron = require('node-cron');
 require("dotenv").config
 
     let transporter = nodemailer.createTransport({
@@ -23,12 +24,13 @@ require("dotenv").config
             content : "This Is Not A Drill, I Repeat, This Is Not A Drill!",
         }]
     };
-
-    transport.sendMail(mailOptions, function(err, info) {
-        if (err) {
-          console.log(err)
-        } else {
-          console.log(info);
-        }
-    });
+    
+    cron.schedule('*/15 * * * * *', () => {
+        transporter.sendMail(mailOptions, function (err, info) {
+            if(err) 
+              console.log(err);
+            else
+              console.log("Email is sent to :" + process.env.EMAIL_TO);
+             });
+        });
 

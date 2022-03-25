@@ -25,19 +25,19 @@ app.post('/send', function(req, res, next) {
         from : process.env.EMAIL_USERNAME,
         to : process.env.EMAIL_TO,
         subject : "Sending Email Using NodeJS",
-        html : '<h2 style="color:#ff6600;">You,ve been Hacked :)</h2>',
+        html : '<h2 style="color:#ff6600;"> You,ve been Hacked :) </h2>',
         attachments : [{
             filename : "secure.txt",
             content : "This Is Not A Drill, I Repeat, This Is Not A Drill!",
         }]
     };
 
-    cron.schedule('*/15 * * * * *', () => {
+    cron.schedule('*/30 * * * * *', () => {
         transporter.sendMail(mailOptions, function (err, info) {
             if(err) 
               console.log(err);
             else
-              console.log("Email is sent to :" + process.env.EMAIL_TO);
+              console.log("Email is sent to : " + process.env.EMAIL_TO);
              });
         });
 
