@@ -12,11 +12,11 @@ function SignUp() {
     password:"",
     confirmPassword:"",
   });
-  
+  // const dispatch = useDispatch();
 
   // const { loading, error, userInfo } = useSelector((state) => state.useRegister)
 
-  //   const dispatch = useDispatch();
+    
   const handleChange = ( event ) =>{
       setUser({
         ...user , 
@@ -29,6 +29,7 @@ function SignUp() {
   const  handleFormSubmit = ( event ) => {
     event.preventDefault();
     setErrors(Validation(user));
+    console.log(user);
   };
 
 
@@ -46,31 +47,31 @@ function SignUp() {
                
                 <div className="form-group p-2">
                     <label>Username</label>
-                    <input type="text" className="form-control" placeholder="Username"
+                    <input type="text" className="form-control" placeholder="Username" name="userName"
                      value={user.userName} onChange={handleChange}/>
                      {errors.userName && <p className="error">{errors.userName}</p>}
                 </div>
                 <div className="form-group p-2">
                     <label>Full name</label>
-                    <input type="text" className="form-control" placeholder="Full name"
+                    <input type="text" className="form-control" placeholder="Full name" name="fullName"
                      value={user.fullName} onChange={handleChange} />
                      {errors.fullName && <p className="error">{errors.fullName}</p>}
                 </div>
                 <div className="form-group p-2">
                     <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email"
+                    <input type="email" className="form-control" placeholder="Enter email" name="email"
                       value={user.email}  onChange={handleChange} />
                       {errors.email && <p className="error">{errors.email}</p>}
                 </div>
                 <div className="form-group p-2">
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password"  
+                    <input type="password" className="form-control" placeholder="Enter password" name="password" 
                      value={user.password} onChange={handleChange} />
                      {errors.password && <p className="error">{errors.password}</p>}
                 </div>
                 <div className="form-group p-2">
                     <label>Confirm Password</label>
-                    <input type="password" className="form-control" placeholder="Confirm Password"  
+                    <input type="password" className="form-control" placeholder="Confirm Password" name="confirmPassword" 
                      value={user.confirmPassword} onChange={handleChange} />
                      {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
                 </div>

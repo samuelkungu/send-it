@@ -26,6 +26,7 @@ function SignIn() {
   const  handleFormSubmit = ( event ) => {
     event.preventDefault();
     setErrors(Validation(user));
+    console.log(user);
   };
   
   
