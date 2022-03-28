@@ -24,16 +24,16 @@ function SignUp() {
       });
     };
 
-  const [errors, setErrors] = useState({});
-
   const  handleFormSubmit = ( event ) => {
     event.preventDefault();
     setErrors(Validation(user));
-    console.log(user);
+      // dispatch(signup(user))
+    
+
   };
 
 
-     
+  const [errors, setErrors] = useState({});
     return (
     <div className='page '>
    
