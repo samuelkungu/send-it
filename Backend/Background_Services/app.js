@@ -32,7 +32,7 @@ app.post('/send', function(req, res, next) {
         }]
     };
 
-    cron.schedule('*/30 * * * * *', () => {
+    cron.schedule('*/10 * * * * *', () => {
         transporter.sendMail(mailOptions, function (err, info) {
             if(err) 
               console.log(err);

@@ -5,12 +5,13 @@
   "main": "email.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node sms.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "africastalking": "^0.5.5",
     "express": "^4.17.3",
     "node-cron": "^3.0.0",
     "nodemailer": "^6.7.3"
