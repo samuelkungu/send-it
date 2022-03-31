@@ -32,10 +32,10 @@ function NavBar() {
         </ul>
         <ul className='navbar-nav navbar-right '> 
             <li className="nav-item">
-                    <Link className="nav-link" to={"/SignIn"}>Login</Link>
+                    <Link className="nav-link" to={"/Login"}>Login</Link>
             </li>
             <li className="nav-item ">
-                    <Link className="nav-link" to={"/SignUp"}>Register</Link>
+                    <Link className="nav-link" to={"/Register"}>Register</Link>
             </li>
         </ul>
         </div>

@@ -32,7 +32,7 @@
 body {
   /* background-image: linear-gradient( to bottom right, var(--shades)  , var(--cyan-light) ); */
   /* background-color: #ffffff; */
-  background-image: url(../../../public/images/others-bg.jpg);
+  background-image: url(../../../../public/images/others-bg.jpg);
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -56,7 +56,7 @@ html, .App, #root, .wrapper {
 
 .card{
   display: flex;
-  background-image: url(../../../public/images/others-bg.jpg); 
+  background-image: url(../../../../public/images/others-bg.jpg); 
   width: 95%;
   margin: 20px 20px 0px 20px;
   padding: 20px 0px 0px 0px;
@@ -158,11 +158,11 @@ li:hover {
   box-sizing: border-box;
 }
 .card-contact{
-   /* background-image: url(../../../public/images/others-bg.jpg); */
+   /* background-image: url(../../../../public/images/others-bg.jpg); */
 }
 .card-contact:hover{
   /* background-image: var(--white); */
-  background-image: url(../../../public/images/others-bg.jpg);
+  background-image: url(../../../../public/images/others-bg.jpg);
   width: 100%;
 }
 /* Float four columns side by side */

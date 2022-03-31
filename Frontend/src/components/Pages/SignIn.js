@@ -43,15 +43,13 @@ function SignIn() {
         <div className="form-group p-2 ">
           <label>Email address</label>
           <input type="email"  className="form-control" placeholder="Enter email"  name="email"
-          autoFocus  value={user.email}  onChange={handleChange} />
-          {errors.email && <p className="error">{errors.email}</p>}
+          autoFocus  value={email}  onChange={handleChange} />
         </div>
   
         <div className="form-group p-2 ">
           <label>Password</label>
           <input  type="password" className="form-control " placeholder="Enter password" name="password" 
-          value={user.password} onChange={handleChange} />
-          {errors.password && <p className="error">{errors.password}</p>}
+          value={password} onChange={handleChange} />
         </div>
   
         <div className="form-group p-2 ">
